@@ -39,7 +39,7 @@ const TrendingMusicVideos = () => {
 
     const videosGrid = useMemo(() =>
         <div className='mt-8 grid md:grid-cols-4 gap-5 px-6'>
-            {data?.data?.contents.map((video) => {
+            {data?.data?.contents?.map((video) => {
                 return (
                     <VideoCard key={video?.video?.videoId} onClick={() => openModalHandler(video?.video?.videoId)} video={video} />
                 )
