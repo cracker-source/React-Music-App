@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 
 const useDebounceSearch = (value: string, delay: number = 500) => {
     const [debouncedValue, setDebouncedValue] = React.useState(value);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [_, setSearchParams] = useSearchParams()
 
     const ref = useRef<boolean>(false)

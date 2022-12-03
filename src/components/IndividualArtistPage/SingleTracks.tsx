@@ -71,4 +71,4 @@ const SingleTracks = ({ artistInfo }: SingleTrackProps) => {
     )
 }
 
-export default SingleTracks
+export default memo(SingleTracks)

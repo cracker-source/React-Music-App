@@ -1,6 +1,5 @@
 import { Fragment, useState } from "react";
 import { useParams } from "react-router-dom";
-import VerifiedIcon from "../assets/icons/VerifiedIcon";
 import Loader from "../components/Loader";
 import Modal from "../components/Modal";
 import useIndividualArtistDetails from "../hooks/useIndividualArtistDetails";

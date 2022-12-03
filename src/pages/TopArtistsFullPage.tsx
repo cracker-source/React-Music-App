@@ -3,9 +3,12 @@ import ArtistMediumCard from "../components/ArtistMediumCard"
 import useTrendingArtists from "../hooks/useTrendingArtists"
 import DownArrowIcon from "../assets/icons/DownArrowIcon"
 import RaiseIndicatorIcon from "../assets/icons/RaiseIndicatorIcon"
+import Loader from "../components/Loader"
 
 const TopArtistsFullPage = () => {
-    const { data, error, isLoading } = useTrendingArtists()
+    const { data, isLoading } = useTrendingArtists()
+
+    if (isLoading) return <Loader />
     return (
         <Fragment>
             <div className="p-10 rounded-md flex items-center gap-8 bg-gradient-to-br from-[#0D324D] to-[#7F5A83]">
