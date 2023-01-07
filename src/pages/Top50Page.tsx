@@ -17,12 +17,12 @@ const Top50Page = () => {
     const globalValue = searchParams.get('global') === 'true' ? true : false
 
     const { data, isLoading } = useTopTracks(globalValue ? 'GLOBAL' : 'IN')
-    const tracksId = useMemo(() => data && Object.values(data?.data) as TopTracks[], [data,])
+    const tracksId = useMemo(() => data && Object.values(data?.data) as TopTracks[], [data])
 
     const trackIdArray = useMemo(() => tracksId?.map((track) => track?.trackMetadata?.trackUri.split(":")[2]).slice(0, 50).join(','), [tracksId])
 
     const { data: fullTrackDetailsData, isLoading: fullTracksLoading } = useTrackFullDetails(trackIdArray ?? "")
-    const fullTracks = useMemo(() => Object.values(fullTrackDetailsData!.data?.tracks), [fullTrackDetailsData])
+    const fullTracks = useMemo(() => Object.values(fullTrackDetailsData?.data?.tracks ?? {}), [fullTrackDetailsData])
 
     const dispatch = useStoreDispatch()
 

@@ -51,7 +51,7 @@ const IndividualArtistPage = (): JSX.Element => {
                 <ArtistIntro artistInfo={artistInfo} />
             </section>
 
-            <section className="px-6">
+            <div className="px-6">
                 <ArtistBiography
                     openModalHandler={openModalHandler}
                     artistInfo={artistInfo}
@@ -73,7 +73,7 @@ const IndividualArtistPage = (): JSX.Element => {
                     <ArtistGallery artistInfo={artistInfo} />
                     <RelatedArtists artistInfo={artistInfo} />
                 </div>
-            </section>
+            </div>
         </Fragment>
     );
 };

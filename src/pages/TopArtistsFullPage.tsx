@@ -27,7 +27,7 @@ const TopArtistsFullPage = () => {
             </div>
             <hr className="mt-10 opacity-40" />
             <div className="px-6 mt-8 grid grid-cols-5 gap-4">
-                {data && Object.values(data?.data?.artists).map((artist, index) => {
+                {data && Object.values(data?.data?.artists)?.map((artist, index) => {
                     return (
                         <ArtistMediumCard
                             peakRank={artist?.chartData?.peakRank}
